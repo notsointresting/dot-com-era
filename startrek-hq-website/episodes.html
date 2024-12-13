@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek HQ - Episodes</title>
+    <style>
+        /* Basic styles for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000080;
+            color: #FFFF00;
+            margin: 0;
+            padding: 20px;
+           background-image: url('images/stars.gif');
+            background-repeat: repeat; /* This will repeat the background image */
+            background-attachment: fixed; /* This will make the background fixed */
+        }
+
+        /* Style for the links */
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #FF00FF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the page content -->
+    <div style="width: 100%; margin: auto; max-width: 800px;">
+
+        <!-- Header section -->
+        <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
+            Episode Guide
+        </h1>
+
+        <!-- Episode list using table-->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+           <thead>
+            <tr style="background-color: #008000;">
+                <th style="padding: 10px; border: 2px solid #000000; text-align: left;">Episode Title</th>
+            </tr>
+            </thead>
+            <tbody>
+             <tr>
+                <td style="padding: 10px; border: 1px solid #000000;"><a href="episode-details.html">Episode 1: The Cat</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #000000;"><a href="episode-details.html">Episode 2: The Dog</a></td>
+            </tr>
+           <tr>
+                <td style="padding: 10px; border: 1px solid #000000;"><a href="episode-details.html">Episode 3: The Fish</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #000000;"><a href="episode-details.html">Episode 4: The Bird</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="images/spock.gif" alt="Spock GIF" style="max-width: 200px;">
+        </div>
+          <!-- Home page link -->
+        <div style="text-align: center; margin-bottom: 20px;">
+           <a href="index.html">Go to Homepage</a>
+        </div>
+          <!-- Footer -->
+        <footer style="text-align: center; font-size: 0.8em; margin-top: 20px;">
+             <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
+        </footer>
+    </div>
+     <script>
+        // Function to update the visitor count and store it in local storage
+        function updateVisitorCount() {
+        let visitorCount = localStorage.getItem('visitorCount');
+        if (visitorCount === null) {
+            visitorCount = 1; // If not found, initialize to 1
+        } else {
+            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+        }
+        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        document.getElementById('visitorCount').textContent = visitorCount;
+        }
+
+      // Call the function when the page loads
+       window.onload = updateVisitorCount;
+    </script>
+</body>
+</html>

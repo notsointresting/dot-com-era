@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Star Trek HQ</title>
-        <style>
-            /* Basic styles for the entire page */
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #000080; /* Deep blue background */
-                color: #FFFF00; /* Bright yellow text */
-                margin: 0;
-                background-image: url('images/stars.gif');
-                background-repeat: repeat; /* This will repeat the background image */
-                background-attachment: fixed; /* This will make the background fixed */
-                padding: 20px;
-            }
-    
-            /* Style for the links */
-            a {
-                color: #00FFFF; /* Electric blue links */
-                text-decoration: underline; /* Underlined links */
-            }
-    
-             a:hover {
-                color: #FF00FF; /* Pink on hover */
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek HQ</title>
+    <style>
+        /* Basic styles for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000080; /* Deep blue background */
+            color: #FFFF00; /* Bright yellow text */
+            margin: 0;
+            background-image: url('images/stars.gif');
+            background-repeat: repeat; /* This will repeat the background image */
+            background-attachment: fixed; /* This will make the background fixed */
+            padding: 20px;
+
+        }
+
+        /* Style for the links */
+        a {
+            color: #00FFFF; /* Electric blue links */
+            text-decoration: underline; /* Underlined links */
+        }
+
+         a:hover {
+            color: #FF00FF; /* Pink on hover */
+        }
+
+    </style>
+</head>
 <body>
     <!-- Main container for the page content -->
     <div style="width: 100%; margin: auto; max-width: 800px;">
@@ -60,15 +62,19 @@
 
 
         <!-- Main content section -->
-         <div style="background-image: url('images/star_background.gif'); padding: 20px; border: 2px solid #FFFF00; margin-bottom: 20px;">
+         <div style="padding: 20px; border: 2px solid #FFFF00; margin-bottom: 20px;">
             <p style="font-size: 1.2em; line-height: 1.6; text-align: center; margin-bottom: 20px;">
-                Welcome to the ultimate Star Trek resource! Explore all things Trek, from the classic series to the movies. Get ready to boldly go where no fan has gone before!
+                <blink>Welcome to the ultimate Star Trek resource!</blink> Explore all things Trek, from the classic series to the movies. Get ready to boldly go where no fan has gone before!
             </p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                   <img src="images/cats-data.gif" alt="facts" style="max-width: 250px;">
+                </div>
 
-            <!-- Featured GIF with marquee effect -->
-             <div style="display: flex; align-items: center;">
+             <div style="display: flex; align-items: center; justify-content: center;">
                 <marquee behavior="scroll" direction="right" scrollamount="10">
-                    <span style="position: relative; top: -20px;">Starship Taking Off!</span>
+                   <span style="position: relative; top: -20px;">
+                     <blink>Starship Taking Off!</blink>
+                   </span>
                     <img src="images/blast.gif" alt="Starship Animation" style="max-width: 60px; margin-right: 10px;">
                  </marquee>
             </div>
@@ -76,9 +82,26 @@
 
        <!-- Footer -->
         <footer style="text-align: center; font-size: 0.8em; margin-top: 20px;">
-          <p>Made with ❤️ By <a href="https://www.codedex.io/@notsointresting">Notsointresting</a> | Contact us at: <a href="mailto:notsointresting@protonmail.com">contact@startrek-hq.com</a></p>
-      </footer>
+             <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
+        </footer>
     </div>
+
+     <script>
+        // Function to update the visitor count and store it in local storage
+        function updateVisitorCount() {
+        let visitorCount = localStorage.getItem('visitorCount');
+        if (visitorCount === null) {
+            visitorCount = 1; // If not found, initialize to 1
+        } else {
+            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+        }
+        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        document.getElementById('visitorCount').textContent = visitorCount;
+        }
+
+      // Call the function when the page loads
+       window.onload = updateVisitorCount;
+    </script>
 
 </body>
 </html>

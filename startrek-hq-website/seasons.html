@@ -14,11 +14,14 @@
             padding: 20px;
             background-image: url('images/stars.gif');
             background-repeat: repeat; /* This will repeat the background image */
-            background-attachment: fixed; /* This will make the background fixed */
+             background-attachment: fixed; /* This will make the background fixed */
         }
 
          h1 {
-            font-family: Impact, sans-serif;
+           font-family: Arial, sans-serif;
+           text-align: center;
+             margin-bottom: 20px;
+             text-shadow: 2px 2px 4px #000000;
         }
           p {
               font-family: Arial, sans-serif;
@@ -32,6 +35,54 @@
         a:hover {
             color: #FF00FF;
         }
+        #spaceship-animation-right {
+           position: absolute;
+            bottom: 100px;
+           right: -200px;
+           z-index: -1;
+            animation: spaceshipGlideRight 15s linear infinite;
+           }
+          @keyframes spaceshipGlideRight {
+            0% { right: -200px; }
+            100% { right: 100%;}
+          }
+           /* Table styles */
+        table {
+            width: 100%;
+           border-collapse: separate;
+            border-spacing: 10px;
+            border: 3px solid #FFFF00;
+             box-shadow: 5px 5px 10px #000000;
+        }
+
+        table td {
+            padding: 10px;
+            text-align: center;
+             vertical-align: top;
+           border: 2px solid #000000;
+
+        }
+
+         /* Graphic divider */
+        .divider {
+            text-align: center;
+             margin: 20px 0;
+            display: block;
+             width: 100%;
+        }
+
+        .divider img {
+             width: 60%;
+             display: block;
+            margin: 0 auto; /* Center image */
+        }
+          .season-link {
+            display: inline-block;
+             }
+          .season-link:hover {
+           opacity: 0.8;
+            filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+         }
     </style>
 </head>
 <body>
@@ -40,18 +91,20 @@
 
         <!-- Header section -->
         <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
+             <img src="graphics/stbar6.gif" alt="Phaser" style="max-width: 80px; margin-right: 10px;">
             Season Guide
-        </h1>
-          <table style="width: 100%; margin-bottom: 20px; border-collapse: separate; border-spacing: 10px;">
+            <img src="graphics/stbar6.gif" alt="Phaser" style="max-width: 80px; margin-left: 10px;">
+         </h1>
+          <table style="width: 100%; margin-bottom: 20px;">
              <tr>
                  <td style="width: 33%; vertical-align: top;">
                      <!-- Display Unit 1 -->
                       <div style="position: relative; display: inline-block; text-align: center; padding: 10px;">
                          <img src="images/frame.png" alt="frame" style="max-width: 100%; display: block;">
                          <div style="position: absolute; top: 1px; left: 0; right: 18px; bottom: 18px; display: flex; align-items: center; justify-content: center;">
-                             <a href="https://www.dailymotion.com/playlist/x6xyuj" style="display: block;">
+                             <a href="https://www.dailymotion.com/playlist/x6xyuj" style="display: block;"  class="season-link">
                                 <img src="images/s1.jpg" alt="Star Trek Season 1" style="max-width: 45%;">
-                           </a>
+                             </a>
                          </div>
                     </div>
                 </td>
@@ -60,7 +113,7 @@
                         <div style="position: relative; display: inline-block; text-align: center; padding: 10px;">
                           <img src="images/frame.png" alt="frame" style="max-width: 100%; display: block;">
                          <div style="position: absolute; top: 2px; left: 0; right: 40px; bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                             <a href="https://www.dailymotion.com/playlist/x6y59p" style="display: block;">
+                             <a href="https://www.dailymotion.com/playlist/x6y59p" style="display: block;"  class="season-link">
                                  <img src="images/s2.jpg" alt="Star Trek Season 2" style="max-width: 80%;">
                             </a>
                          </div>
@@ -71,7 +124,7 @@
                        <div style="position: relative; display: inline-block; text-align: center; padding: 10px;">
                          <img src="images/frame.png" alt="frame" style="max-width: 100%; display: block;">
                         <div style="position: absolute; top: 2px; left: 0; right: 40px; bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                            <a href="https://www.dailymotion.com/playlist/x6yo50" style="display: block;">
+                            <a href="https://www.dailymotion.com/playlist/x6yo50" style="display: block;"  class="season-link">
                               <img src="images/s3.jpg" alt="Star Trek Season 3" style="max-width: 80%;">
                             </a>
                         </div>
@@ -79,25 +132,30 @@
                   </td>
              </tr>
          </table>
-           <div style="text-align: center; margin-bottom: 20px;">
+           <div class="divider">
+                <img src="graphics/stbar3.gif" alt="Star Trek Bar Divider">
+         </div>
+          <div style="text-align: center; margin-bottom: 20px;">
           <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG9mZG0wcnpzdjRqcGhoMGI0ZnJ0enRtaXQ5bjZ1cWo2OWMwdXljZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yYXZjsFhtsG5AAOtuJ/giphy.webp" alt="Rotating Earth" style="max-width: 100px;">
        </div>
        <div style="text-align: center; margin-bottom: 20px;">
-          <marquee behavior="scroll" direction="left" scrollamount="10">
-            <img src="https://cdn-icons-png.flaticon.com/512/1203/1203356.png" alt="icon" style="max-width: 30px; margin-right: 5px;">
-              <a href="index.html">
-              <blink>Go Back to Homepage!</blink>
+           <marquee behavior="scroll" direction="left" scrollamount="10" id="back-marquee">
+           <img src="graphics/sttas2.gif" alt="sttas2" style="max-width: 30px; margin-right: 5px;">
+           <a href="index.html">
+             <blink>Go Back to Homepage!</blink>
              </a>
-         </marquee>
+              <img src="graphics/stvoy2.gif" alt="stvoy2" style="max-width: 30px; margin-left: 5px;">
+          </marquee>
          </div>
-           <div style="text-align: center; margin-bottom: 20px;">
-            <img src="images/under-construction.gif" alt="Under Construction" style="max-width: 200px;">
-        </div>
           <!-- Footer -->
         <footer style="text-align: center; font-size: 0.8em; margin-top: 20px;">
              <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
         </footer>
+        <div id="spaceship-animation-right">
+            <img src="graphics/stent2.gif" alt="Spaceship 2" style="max-width: 100px;">
+           </div>
     </div>
+
      <script>
         // Function to update the visitor count and store it in local storage
         function updateVisitorCount() {
@@ -114,5 +172,18 @@
       // Call the function when the page loads
        window.onload = updateVisitorCount;
     </script>
+     <script>
+            const seasonLinks = document.querySelectorAll('.season-link');
+          seasonLinks.forEach(link => {
+           link.addEventListener('mouseover', function() {
+            link.style.transform = 'scale(1.1)';
+             link.style.transition = 'transform 0.2s ease-in-out';
+           });
+             link.addEventListener('mouseout', function() {
+             link.style.transform = 'scale(1)';
+                link.style.transition = 'transform 0.2s ease-in-out';
+            });
+         });
+     </script>
 </body>
 </html>

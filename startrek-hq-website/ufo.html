@@ -4,35 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Trek HQ - UFO Sightings</title>
-      <style>
-        /* Basic styles for the entire page */
-        body {
-            font-family: Arial, sans-serif;
+    <style>
+      /* Basic styles for the entire page */
+              body {
+            font-family: "Arial Black", Arial, sans-serif;
             background-color: #000080;
             color: #FFFF00;
             margin: 0;
             padding: 20px;
             background-image: url('images/stars.gif');
-            background-repeat: repeat; /* This will repeat the background image */
-            background-attachment: fixed; /* This will make the background fixed */
+            background-repeat: repeat;
+            background-attachment: fixed;
+             cursor: url('images/cursor.gif'), auto; /* Custom cursor */
         }
 
-         h1 {
-            font-family: Impact, sans-serif;
+        h1 {
+            font-family: "Impact", sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+             text-shadow: 2px 2px 4px #000000;
         }
-          p {
-              font-family: Arial, sans-serif;
-          }
+
+        p {
+            font-family:  "Arial Black", Arial, sans-serif;
+        }
         /* Style for the links */
         a {
             color: #00FFFF;
             text-decoration: underline;
+             font-family:  "Arial Black", Arial, sans-serif;
         }
 
         a:hover {
             color: #FF00FF;
         }
-    </style>
+         /* Form styles */
+        label, input, textarea {
+            display: block;
+            margin-bottom: 5px;
+            color: #FFFF00;
+             font-family:  "Arial Black", Arial, sans-serif;
+        }
+
+        input, textarea {
+            padding: 5px;
+            width: 300px;
+            color: black;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+         /*Button styles */
+        button[type="submit"] {
+           padding: 10px 20px;
+            background-color: #000080;
+            color: #FFFF00;
+            border: 1px solid #FFFF00;
+            cursor: pointer;
+              font-family:  "Arial Black", Arial, sans-serif;
+        }
+
+        button[type="submit"]:hover {
+          background-color: #FF00FF;
+           color: #000000;
+         }
+         /* Marquee styles */
+         marquee {
+               background-color: #333;
+            color: #fff;
+             padding: 5px;
+             font-family:  "Arial Black", Arial, sans-serif;
+        }
+        /* Table styles */
+        table {
+            width: 100%;
+           border-collapse: separate;
+            border-spacing: 10px;
+            border: 3px solid #FFFF00;
+             box-shadow: 5px 5px 10px #000000;
+        }
+
+        table td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: top;
+           background-color: #008000;
+           border: 2px solid #000000;
+            font-family:  "Arial Black", Arial, sans-serif;
+        }
+
+         table th{
+          font-family:  "Arial Black", Arial, sans-serif;
+        }
+         /* Graphic divider */
+        .divider {
+            text-align: center;
+             margin: 20px 0;
+            display: block;
+             width: 100%;
+        }
+
+        .divider img {
+             width: 60%;
+             display: block;
+            margin: 0 auto; /* Center image */
+        }
+          /* Navigation button styles */
+        .nav-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #008000;
+          color: #FFFF00;
+           text-decoration: none;
+           border: 2px solid #000000;
+           text-align: center;
+           margin-right: 5px;
+            font-family:  "Arial Black", Arial, sans-serif;
+        }
+
+        .nav-button:hover {
+           background-color: #00FFFF;
+           color: #000000;
+         }
+
+           #music-icon {
+           width: 40px;
+            cursor: pointer;
+           position: absolute;
+           top: 10px;
+            right: 10px;
+            max-width: 100%;
+        filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+           }
+
+          #spaceship-animation {
+           position: absolute;
+            bottom: 100px;
+            left: -200px;
+            z-index: -1;
+            animation: spaceshipGlide 20s linear infinite;
+           }
+             @keyframes spaceshipGlide {
+             0% { left: -200px; }
+            100% { left: 100%;}
+           }
+          #spaceship-animation-right {
+           position: absolute;
+            bottom: 100px;
+           right: -200px;
+           z-index: -1;
+            animation: spaceshipGlideRight 15s linear infinite;
+           }
+          @keyframes spaceshipGlideRight {
+            0% { right: -200px; }
+            100% { right: 100%;}
+          }
+          .ufo-link {
+           display: inline-block;
+            }
+         .ufo-link:hover {
+         opacity: 0.8;
+           filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+          }
+          .season-link {
+            display: inline-block;
+             }
+          .season-link:hover {
+           opacity: 0.8;
+            filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+         }
+           /*Container styles */
+       .container {
+           width: 80%; /* Slightly wider container */
+            max-width: 900px;
+            margin: 20px auto;
+           border: 2px solid #FFFF00;
+            padding: 20px;
+            background-color: #008000;
+        }
+
+        .form-container {
+            border: 2px solid #FFFF00;
+            padding: 20px;
+            background-color: #008000;
+            margin-bottom: 20px;
+
+        }
+
+          .entries-container {
+             border: 2px solid #FFFF00;
+             padding: 20px;
+           background-color: #008000;
+             margin-bottom: 20px;
+        }
+          /*Crew section styles*/
+      .crew-section {
+          margin-bottom: 20px;
+       }
+        .crew-image {
+           max-width: 80px; /* Small images */
+         max-height: 80px;
+           border: 2px solid #FFFF00;
+           margin: 10px;
+         display: inline-block;
+        }
+         table tbody tr:nth-child(even) {
+            background-color: #004000;
+            }
+
+            table tbody tr:nth-child(odd) {
+           background-color: #002000;
+            }
+  </style>
 </head>
 <body>
     <!-- Main container for the page content -->
@@ -40,9 +223,16 @@
 
         <!-- Header section -->
         <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
-            90s UFO Sightings
+           <img src="graphics/stbar3.gif" alt="Graphic" style="max-width: 80px; margin-right: 10px;">
+           90s UFO Sightings
+          <img src="graphics/stbar3.gif" alt="Graphic" style="max-width: 80px; margin-left: 10px;">
         </h1>
-
+          <div style="text-align: center; margin-bottom: 20px;">
+            <img src="https://i.gifer.com/origin/2b/2bd526c551b1ec8cb1af08d78dd09e8b_w200.gif" alt="UFO GIF" style="max-width: 200px; margin-bottom: 10px; border: 2px dashed #FFFF00;">
+       </div>
+         <div class="divider">
+               <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+        </div>
         <!-- UFO Article list using table-->
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
              <thead>
@@ -52,50 +242,50 @@
               </thead>
              <tbody>
                <tr>
-                 <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/mufon89.txt">UFO Reports: 1989</a></td>
+                 <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/mufon89.txt">UFO Reports: 1989</a></td>
                </tr>
                 <tr>
-                   <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/ethics.ufo">Ethical implications of the UFO Abduction Phenomenon by Budd Hopkins</a></td>
+                   <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/ethics.ufo">Ethical implications of the UFO Abduction Phenomenon by Budd Hopkins</a></td>
                 </tr>
                 <tr>
-                   <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/bbun8.txt">Blue Book Unknown Sightings</a></td>
+                   <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/bbun8.txt">Blue Book Unknown Sightings</a></td>
                 </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/nasa1.ufo">Compilation of Material relating to NASA and Sightings by Astronauts of UFOs</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/nasa1.ufo">Compilation of Material relating to NASA and Sightings by Astronauts of UFOs</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/rhodbt1.ufo">Various BBS Messages about UFO Sightings</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/rhodbt1.ufo">Various BBS Messages about UFO Sightings</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/SIGHTINGS/nasa.ufo">Apollo Program UFO Sighting from 1960's Comes to Light, Washington State MUFON, March 21, 1988</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/SIGHTINGS/nasa.ufo">Apollo Program UFO Sighting from 1960's Comes to Light, Washington State MUFON, March 21, 1988</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/cia_ufo_story.txt">The Krill Archives: Confidential: A Situation Report on our Acquisition of Advanced Technology and Interaction with Alien Cultures by O.H. Krill (January, 1988)</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/cia_ufo_story.txt">The Krill Archives: Confidential: A Situation Report on our Acquisition of Advanced Technology and Interaction with Alien Cultures by O.H. Krill (January, 1988)</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/paralazar.ufo">Messages, Interviews and Information about John Lazar, Claimed Government UFO Witness, on Paranet (1989-1990)</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a  class="ufo-link"href="http://textfiles.com/ufo/paralazar.ufo">Messages, Interviews and Information about John Lazar, Claimed Government UFO Witness, on Paranet (1989-1990)</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/foiadoc.ufo">A Large Batch of UFO-Related Air Force Documents retrieved via the Freedom of Information Act</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/foiadoc.ufo">A Large Batch of UFO-Related Air Force Documents retrieved via the Freedom of Information Act</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/mj.12">The Secret Government: The Origin, Identity, and Purpose of MJ-12 by Milton William Cooper (May 23, 1989)</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/mj.12">The Secret Government: The Origin, Identity, and Purpose of MJ-12 by Milton William Cooper (May 23, 1989)</a></td>
                </tr>
                <tr>
-                  <td style="padding: 10px; border: 1px solid #000000;"><a href="http://textfiles.com/ufo/oxcart.txt">Very Long Set of Articles about the OXCART Project (Secret Aircraft)</a></td>
+                  <td style="padding: 10px; border: 1px solid #000000;"><a class="ufo-link" href="http://textfiles.com/ufo/oxcart.txt">Very Long Set of Articles about the OXCART Project (Secret Aircraft)</a></td>
                </tr>
              </tbody>
         </table>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <img src="https://i.gifer.com/origin/2b/2bd526c551b1ec8cb1af08d78dd09e8b_w200.gif" alt="UFO GIF" style="max-width: 200px;">
-        </div>
+         <div class="divider">
+              <img src="graphics/stbar6.gif" alt="Star Trek Bar Divider">
+       </div>
           <!-- Home page link -->
         <div style="text-align: center; margin-bottom: 20px;">
            <a href="index.html">Go to Homepage</a>
         </div>
           <!-- Footer -->
          <footer style="text-align: center; font-size: 0.8em; margin-top: 20px;">
-             <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
+             <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> <marquee behavior="scroll" direction="left" scrollamount="5"> <img src="graphics/sttos2.gif" alt="Star Trek TOS icon" style="max-width: 20px; margin-right: 10px;">   Star Trek site in progress!<img src="graphics/stds92.gif" alt="Star Trek DS9 icon" style="max-width: 20px; margin-left: 10px;"></marquee> </p>
         </footer>
     </div>
      <script>
@@ -114,5 +304,20 @@
       // Call the function when the page loads
        window.onload = updateVisitorCount;
     </script>
+     <script>
+            const ufoLinks = document.querySelectorAll('.ufo-link');
+          ufoLinks.forEach(link => {
+           link.addEventListener('mouseover', function() {
+            link.style.transform = 'scale(1.1)';
+             link.style.transition = 'transform 0.2s ease-in-out';
+            link.style.textShadow = '2px 2px 4px #FFFF00';
+           });
+             link.addEventListener('mouseout', function() {
+             link.style.transform = 'scale(1)';
+                link.style.transition = 'transform 0.2s ease-in-out';
+               link.style.textShadow = 'none';
+            });
+         });
+     </script>
 </body>
 </html>

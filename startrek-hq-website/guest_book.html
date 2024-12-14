@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek HQ - Guestbook</title>
+     <style>
+        /* Basic styles for the entire page */
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #000080;
+            color: #FFFF00;
+            margin: 0;
+            padding: 20px;
+             background-image: url('images/stars.gif');
+            background-repeat: repeat; /* This will repeat the background image */
+             background-attachment: fixed; /* This will make the background fixed */
+         }
+
+         h1 {
+              font-family: Impact, sans-serif;
+              text-align: center;
+             margin-bottom: 20px;
+        }
+         p {
+              font-family: Arial, sans-serif;
+         }
+          label, input, textarea {
+             display: block;
+             margin-bottom: 5px;
+             color: #FFFF00;
+         }
+        /* Style for the links */
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #FF00FF;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Main container for the page content -->
+    <div style="width: 100%; margin: auto; max-width: 800px;">
+
+        <!-- Header section -->
+        <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
+            Guestbook
+        </h1>
+
+        <!-- Guestbook form -->
+        <form id="guestbook-form" style="margin-bottom: 20px; border: 2px solid #FFFF00; padding: 20px; background-color: #008000;">
+             <label for="name">Name:</label>
+              <input type="text" id="name" required style="padding: 5px; width: 300px; color: black; background-color: white;">
+             <label for="comment">Comment:</label>
+                <textarea id="comment" rows="4" required style="padding: 5px; width: 300px; color: black; background-color: white;"></textarea>
+               <button type="submit" style="padding: 10px 20px; background-color: #000080; color: #FFFF00; border: 1px solid #FFFF00; cursor: pointer;">Add Comment</button>
+         </form>
+
+          <!-- Guestbook entries -->
+          <div id="guestbook-entries" style="margin-bottom: 20px; border: 2px solid #FFFF00; padding: 20px; background-color: #008000;">
+          </div>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="https://i.gifer.com/origin/2b/2bd526c551b1ec8cb1af08d78dd09e8b_w200.gif" alt="UFO GIF" style="max-width: 200px;">
+        </div>
+          <!-- Home page link -->
+          <div style="text-align: center; margin-bottom: 20px;">
+             <a href="index.html">Go to Homepage</a>
+          </div>
+          <!-- Footer -->
+          <footer style="text-align: center; font-size: 0.8em; margin-top: 20px;">
+               <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
+         </footer>
+    </div>
+         <script>
+            const form = document.getElementById('guestbook-form');
+            const entriesDiv = document.getElementById('guestbook-entries');
+              function displayEntries() {
+                entriesDiv.innerHTML = '';
+                  const entries = JSON.parse(localStorage.getItem('guestbookEntries') || '[]');
+                   entries.forEach(entry => {
+                       const entryElement = document.createElement('p');
+                        entryElement.innerHTML = `<strong>${entry.name}:</strong> ${entry.comment}`;
+                       entriesDiv.appendChild(entryElement);
+                   });
+              }
+               form.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  const name = document.getElementById('name').value;
+                 const comment = document.getElementById('comment').value;
+                    const entries = JSON.parse(localStorage.getItem('guestbookEntries') || '[]');
+                  entries.push({ name, comment });
+                   localStorage.setItem('guestbookEntries', JSON.stringify(entries));
+                  displayEntries()
+                     form.reset();
+              });
+         displayEntries()
+    </script>
+       <script>
+        // Function to update the visitor count and store it in local storage
+        function updateVisitorCount() {
+        let visitorCount = localStorage.getItem('visitorCount');
+        if (visitorCount === null) {
+            visitorCount = 1; // If not found, initialize to 1
+        } else {
+            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+        }
+        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        document.getElementById('visitorCount').textContent = visitorCount;
+        }
+
+      // Call the function when the page loads
+       window.onload = updateVisitorCount;
+    </script>
+</body>
+</html>

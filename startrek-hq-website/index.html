@@ -33,12 +33,23 @@
         a:hover {
             color: #FF00FF;
         }
+          #music-icon {
+            width: 40px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 100%;
+            filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+           }
     </style>
 </head>
 <body>
     <!-- Main container for the page content -->
     <div style="width: 100%; margin: auto; max-width: 800px;">
-
+         <div id="music-icon">
+              <img src="images/music-icon.png" alt="music icon" style="max-width: 100%;">
+         </div>
         <!-- Header section -->
         <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
             <img src="images/logo.gif" alt="Star Trek HQ Logo" style="display: block; margin: 0 auto; max-width: 300px; border: 2px dashed #FFFF00;">
@@ -51,16 +62,16 @@
                     <a href="index.html" style="display: block;">Home</a>
                 </td>
                 <td style="background-color: #008000; padding: 10px; text-align: center; border: 2px solid #000000;">
-                    <a href="episodes.html" style="display: block;">Episodes</a>
+                    <a href="seasons.html" style="display: block;">Seasons</a>
                 </td>
                 <td style="background-color: #008000; padding: 10px; text-align: center; border: 2px solid #000000;">
                     <a href="ufo.html" style="display: block;">UFOs</a>
                 </td>
                   <td style="background-color: #008000; padding: 10px; text-align: center; border: 2px solid #000000;">
-                    <a href="music.html" style="display: block;">Music</a>
+                    <a href="guest_book.html" style="display: block;">Guest List</a>
                 </td>
                  <td style="background-color: #008000; padding: 10px; text-align: center; border: 2px solid #000000;">
-                    <a href="contact.html" style="display: block;">Contact</a>
+                    <a href="secret.html" style="display: block;">Secret</a>
                 </td>
             </tr>
         </table>
@@ -76,11 +87,9 @@
                 </div>
 
              <div style="display: flex; align-items: center; justify-content: center;">
-                <marquee behavior="scroll" direction="right" scrollamount="10">
-                   <span style="position: relative; top: -20px;">
-                     <blink>Starship Taking Off!</blink>
-                   </span>
-                    <img src="images/blast.gif" alt="Starship Animation" style="max-width: 60px; margin-right: 10px;">
+                <marquee behavior="scroll" direction="right" scrollamount="10" id="quote-marquee">
+
+                   <img src="images/blast.gif" alt="Starship Animation" style="max-width: 60px; margin-right: 10px;">
                  </marquee>
             </div>
         </div>
@@ -90,7 +99,59 @@
              <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span> </p>
         </footer>
     </div>
+     <audio id="background-audio" loop autoplay src="images/star_trek_theme.mp3"></audio>
+        <script>
+           const audio = document.getElementById('background-audio')
+            const musicIcon = document.getElementById('music-icon');
+            let isPlaying = true;
+          musicIcon.addEventListener('click', () => {
+           if(isPlaying) {
+            audio.pause();
+            isPlaying = false;
+              musicIcon.style.opacity = 0.5;
+           } else {
+            audio.play();
+             isPlaying = true
+              musicIcon.style.opacity = 1;
+            }
+          })
+          const quoteMarquee = document.getElementById('quote-marquee');
+          const quotes = ["Logic is the beginning of wisdom, not the end. - Spock",
+    "The prejudices people feel about each other disappear when they get to know each other. - Captain Kirk",
+    "If we’re going to be damned, let’s be damned for what we really are. - Jean-Luc Picard",
+    "You can use logic to justify almost anything. That’s its power. And it’s flaw. - Captain Cathryn Janeway",
+    "Time is fluid…like a river with currents, eddies, backwash. - Spock",
+    "Time is the fire in which we burn. - Malcolm McDowell J. M. Dillard",
+    "I canna’ change the laws of physics. - Scotty",
+    "Live long, and prosper. - Spock",
+    "Things are only impossible until they’re not. - Captain Kirk",
+    "Insufficient facts always invite danger. - Spock",
+    "Change is the essential process of all existence. - Spock",
+    "Without freedom of choice there is no creativity. - Captain Kirk",
+    "In critical moments, men sometimes see exactly what they wish to see. — Spock",
+    "One man cannot summon the future. -Spock",
+    "But one man can change the present! — Captain Kirk",
+    "Highly illogical. — Spock",
+    "I fail to comprehend your indignation, sir. I have simply made the logical deduction that you are a liar— Spock",
+    "Without followers, evil cannot spread.— Spock",
+    "Curious, how often you humans manage to obtain that which you do not want.— Spock",
+    "A species that enslaves other beings is hardly superior — mentally or otherwise. — Captain Kirk",
+    "Evil does seek to maintain power by suppressing the truth. — Spock",
+    "A lie is a very poor way to say hello. – Edith Keeler",
+    "You may find that having is not so pleasing a thing as wanting. This is not logical, but it is often true. — Spock",
+    "When governments murder those who speak the truth, it is time to get new governments. ― Diane Duane"]
+            function displayRandomQuote() {
+                const randomIndex = Math.floor(Math.random() * quotes.length);
+                   quoteMarquee.innerHTML = `
+                     <span style="position: relative; top: -20px;">
+                      <blink>${quotes[randomIndex]}</blink>
+                   </span>
+                    <img src="images/blast.gif" alt="Starship Animation" style="max-width: 60px; margin-right: 10px;">
+                 `;
 
+           }
+           displayRandomQuote();
+    </script>
      <script>
         // Function to update the visitor count and store it in local storage
         function updateVisitorCount() {
@@ -107,6 +168,5 @@
       // Call the function when the page loads
        window.onload = updateVisitorCount;
     </script>
-
 </body>
 </html>

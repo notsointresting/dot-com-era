@@ -1,68 +1,40 @@
-# dot-com-era
-It contains...
+## My Star Trek 90s Website - Read Me!
 
-# To Do
-1. index html ---> done
-2. Complete episodes.html:
+Hey everyone!
 
-Create episodes.html: Make sure you have the code for this page.
+So, Codedex had this cool holiday hackathon, and I just had to join in. I picked the "personal project" thing because I really wanted to build a Star Trek fan website. But there's a catch: it had to be 90s style, so I did my best to make it feel like those old, kinda weird internet days.
 
-Add a GIF: Ensure that the spock.gif is added to the images folder.
+**You can check it out here:** [https://notsointresting.github.io/dot-com-era/startrek-hq-website/](https://notsointresting.github.io/dot-com-era/startrek-hq-website/)
 
-Open in Browser: Open this page in your browser and check how it looks.
+**What you'll find here (Star Trek style):**
 
-3. Create episode-details.html
+Imagine if people in the 90s were super into Star Trek, and this was their site. That's kinda what I was going for:
 
-Create episode-details.html: Create a new HTML file episode-details.html
+*   **Star Trek 90s Look:** Think lots of bright colors and pixel art, cheesy transitions for Star Trek, and a place where you could leave a message about Star Trek!
+*   **Star Trek Stuff:** It's got Star Trek episodes, movies, and all the other series. You can check out all the Star Trek seasons and even clips from Star Trek.
+*   **Secret Star Trek:** I've hidden a secret Star Trek area somewhere. You might find it if you look around like it's a Star Trek episode!
+*   **Star Trek in the 90s:** There's even a part about UFO sightings from the 90s, because what's a 90s website without some alien stuff, right?
+*   **Star Trek's Faces:** You will see all the cast member of Star Trek.
+*   **Star Trek Game:** There is a secret Star Trek space game to give you that old gaming vibe.
+*    **Star Trek Quotes:** Quotes from spock can be seen all over Star Trek website.
 
-Layout: Make sure that you use same style as the other pages.
+**How to Explore (Star Trek-style):**
 
-Content: Add content like episode name, synopsis and screenshot.
+Just click on stuff. You never know what Star Trek thing you might find.
 
-Link back: Add a link to go back to the episodes.html.
+**What I Learned (And Some Star Trek Stuff I'm Happy About)**
 
-4. Create characters.html
+This was a ton of fun, I got to play with how websites looked way back when. I liked:
 
-Create characters.html: Create a new HTML file characters.html
+*   Trying to make the Star Trek site feel old-school but still easy to use.
+*   Putting my love of Star Trek together with those crazy 90s looks.
+*   Making it interactive, so it's more than just a boring page for Star Trek!
 
-Layout: Make sure that you use same style as the other pages.
+**Some Things to Keep in Mind (Because Even Star Trek Has Flaws)**
 
-Content: Add content like character name, image and link to detail page.
+*   Don't expect it to be too perfect.
+*   It's supposed to look like a 90s Star Trek page, so if it looks a bit strange, that's on purpose.
 
-Add GIF: Add some character-related GIFs in the page.
+I'm excited to share this Star Trek website with everyone. Have fun looking around! Let me know what you think about it.
 
-Link back: Add a link to go back to the index.html.
-
-5. Create character-details.html
-
-Create character-details.html: Create a new HTML file character-details.html
-
-Layout: Make sure that you use same style as the other pages.
-
-Content: Add content like character name, bio and image.
-
-Link back: Add a link to go back to the characters.html.
-
-6. Create links.html
-
-Create links.html: Create a new HTML file links.html
-
-Layout: Make sure that you use same style as the other pages.
-
-Content: Add links to other websites.
-
-Add GIFs: Add some GIFs to make it cool.
-
-Link back: Add a link to go back to the index.html.
-
-7. Create contact.html
-
-Create contact.html: Create a new HTML file contact.html
-
-Layout: Make sure that you use same style as the other pages.
-
-Content: Add a form for users to contact.
-
-Add Javascript: Add JavaScript for showing an alert message after the user submits the form.
-
-Link back: Add a link to go back to the index.html.
+🖖 Live long and prosper 🖖 (and have fun checking out the Star Trek site!)

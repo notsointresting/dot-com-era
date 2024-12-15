@@ -83,11 +83,23 @@
            opacity: 0.8;
             filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
          }
+         #music-icon {
+           width: 40px;
+            cursor: pointer;
+           position: absolute;
+           top: 10px;
+            right: 10px;
+            max-width: 100%;
+        filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+           }
     </style>
 </head>
 <body>
     <!-- Main container for the page content -->
     <div style="width: 100%; margin: auto; max-width: 800px;">
+      <div id="music-icon">
+              <img src="images/music-icon.png" alt="music icon" style="max-width: 100%;">
+         </div>
 
         <!-- Header section -->
         <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
@@ -155,7 +167,7 @@
             <img src="graphics/stent2.gif" alt="Spaceship 2" style="max-width: 100px;">
            </div>
     </div>
-
+    <audio id="background-audio" loop autoplay src="images/star_trek_theme.mp3"></audio>
      <script>
         // Function to update the visitor count and store it in local storage
         function updateVisitorCount() {
@@ -173,6 +185,20 @@
        window.onload = updateVisitorCount;
     </script>
      <script>
+      const audio = document.getElementById('background-audio')
+            const musicIcon = document.getElementById('music-icon');
+            let isPlaying = true;
+          musicIcon.addEventListener('click', () => {
+           if(isPlaying) {
+            audio.pause();
+            isPlaying = false;
+              musicIcon.style.opacity = 0.5;
+           } else {
+            audio.play();
+             isPlaying = true
+              musicIcon.style.opacity = 1;
+            }
+          })
             const seasonLinks = document.querySelectorAll('.season-link');
           seasonLinks.forEach(link => {
            link.addEventListener('mouseover', function() {

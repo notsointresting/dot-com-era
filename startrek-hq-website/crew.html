@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek HQ - The Crew</title>
+    <style>
+       /* Basic styles for the entire page */
+         body {
+            font-family: "Arial Black", Arial, sans-serif;
+            background-color: #000080;
+            color: #FFFF00;
+            margin: 0;
+            padding: 20px;
+            background-image: url('images/stars.gif');
+            background-repeat: repeat;
+            background-attachment: fixed;
+         }
+
+         h1 {
+             font-family: "Impact", sans-serif;
+            text-align: center;
+             margin-bottom: 20px;
+              text-shadow: 2px 2px 4px #000000;
+         }
+           p {
+               font-family:  "Arial Black", Arial, sans-serif;
+          }
+        /* Style for the links */
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+            font-family:  "Arial Black", Arial, sans-serif;
+        }
+
+        a:hover {
+            color: #FF00FF;
+        }
+        /* Table styles */
+          table {
+             width: 100%;
+             border-collapse: separate;
+             border-spacing: 10px;
+             border: 3px solid #FFFF00;
+             box-shadow: 5px 5px 10px #000000;
+         }
+
+         table td {
+             padding: 10px;
+             text-align: center;
+              vertical-align: top;
+             background-color: #008000;
+            border: 2px solid #000000;
+            font-family: "Arial Black", Arial, sans-serif;
+         }
+         /*Crew section styles*/
+      .crew-section {
+          margin-bottom: 20px;
+       }
+         .crew-image {
+           max-width: 80px; /* Small images */
+           max-height: 80px;
+           border: 2px solid #FFFF00;
+           margin: 10px;
+         display: inline-block;
+         }
+           /* Graphic divider */
+        .divider {
+             text-align: center;
+             margin: 20px 0;
+            display: block;
+            width: 100%;
+        }
+
+        .divider img {
+             width: 60%;
+              display: block;
+           margin: 0 auto; /* Center image */
+       }
+
+       #music-icon {
+           width: 40px;
+            cursor: pointer;
+           position: absolute;
+           top: 10px;
+            right: 10px;
+            max-width: 100%;
+        filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+           }
+    </style>
+</head>
+<body>
+    <!-- Main container for the page content -->
+    <div style="width: 100%; margin: auto; max-width: 800px;">
+      <div id="music-icon">
+              <img src="images/music-icon.png" alt="music icon" style="max-width: 100%;">
+         </div>
+         <!-- Header section -->
+         <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
+             The Crew
+         </h1>
+      <!-- TOS Crew section -->
+     <div class="crew-section">
+         <div class="divider">
+             <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+          </div>
+        <h2 style="text-align: center;">Star Trek: The Original Series</h2>
+        <table style="width: 100%;">
+            <tr>
+                <td><img src="graphics/kirk1.jpg" alt="Kirk" class="crew-image"><p>Captain Kirk</p></td>
+                <td><img src="graphics/spock1.jpg" alt="Spock" class="crew-image"><p>Spock</p></td>
+                <td><img src="graphics/mccoy1.jpg" alt="McCoy" class="crew-image"><p>Dr. McCoy</p></td>
+                <td><img src="graphics/scotty1.jpg" alt="Scotty" class="crew-image"><p>Scotty</p></td>
+                 <td><img src="graphics/sulu1.jpg" alt="Sulu" class="crew-image"><p>Sulu</p></td>
+                 <td><img src="graphics/uhura1.jpg" alt="Uhura" class="crew-image"><p>Uhura</p></td>
+            </tr>
+       </table>
+      </div>
+        <!-- TNG Crew section -->
+      <div class="crew-section">
+         <div class="divider">
+             <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+          </div>
+        <h2 style="text-align: center;">Star Trek: The Next Generation</h2>
+         <table style="width: 100%;">
+            <tr>
+              <td><img src="graphics/picard1.jpg" alt="Picard" class="crew-image"><p>Captain Picard</p></td>
+               <td><img src="graphics/riker1.jpg" alt="Riker" class="crew-image"><p>Commander Riker</p></td>
+              <td><img src="graphics/data1.jpg" alt="Data" class="crew-image"><p>Lt. Commander Data</p></td>
+               <td><img src="graphics/troi1.jpg" alt="Troi" class="crew-image"><p>Counselor Troi</p></td>
+                 <td><img src="graphics/geordi1.jpg" alt="Geordi" class="crew-image"><p>Geordi</p></td>
+                 <td><img src="graphics/worf1.jpg" alt="Worf" class="crew-image"><p>Lt. Worf</p></td>
+           </tr>
+      </table>
+    </div>
+       <!-- DS9 Crew Section -->
+     <div class="crew-section">
+        <div class="divider">
+             <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+        </div>
+       <h2 style="text-align: center;">Star Trek: Deep Space 9</h2>
+       <table style="width: 100%;">
+            <tr>
+              <td><img src="graphics/ben1.jpg" alt="Sisko" class="crew-image"><p>Commander Sisko</p></td>
+                <td><img src="graphics/kira1.jpg" alt="Kira" class="crew-image"><p>Major Kira</p></td>
+                <td><img src="graphics/odo1.jpg" alt="Odo" class="crew-image"><p>Odo</p></td>
+               <td><img src="graphics/jadzia1.jpg" alt="Jadzia" class="crew-image"><p>Jadzia Dax</p></td>
+                 <td><img src="graphics/miles1.jpg" alt="Miles" class="crew-image"><p>Miles O'Brien</p></td>
+                 <td><img src="graphics/quark1.jpg" alt="Quark" class="crew-image"><p>Quark</p></td>
+            </tr>
+       </table>
+     </div>
+     <!-- Voyager Crew Section -->
+    <div class="crew-section">
+       <div class="divider">
+            <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+       </div>
+       <h2 style="text-align: center;">Star Trek: Voyager</h2>
+       <table style="width: 100%;">
+            <tr>
+              <td><img src="graphics/janeway1.jpg" alt="Janeway" class="crew-image"><p>Captain Janeway</p></td>
+                <td><img src="graphics/chakotay1.jpg" alt="Chakotay" class="crew-image"><p>Commander Chakotay</p></td>
+                <td><img src="graphics/tuvok1.jpg" alt="Tuvok" class="crew-image"><p>Lt. Commander Tuvok</p></td>
+               <td><img src="graphics/harry1.jpg" alt="Harry" class="crew-image"><p>Lt. Harry Kim</p></td>
+                <td><img src="graphics/torres1.jpg" alt="Torres" class="crew-image"><p>B'Elanna Torres</p></td>
+                 <td><img src="graphics/neelix1.jpg" alt="Neelix" class="crew-image"><p>Neelix</p></td>
+          </tr>
+      </table>
+    </div>
+    <!-- Enterprise Crew Section -->
+   <div class="crew-section">
+         <div class="divider">
+             <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
+         </div>
+        <h2 style="text-align: center;">Star Trek: Enterprise</h2>
+        <table style="width: 100%;">
+            <tr>
+              <td><img src="graphics/archer1.jpeg" alt="Archer" class="crew-image"><p>Captain Archer</p></td>
+                <td><img src="graphics/tpol1.jpeg" alt="Tpol" class="crew-image"><p>T'Pol</p></td>
+                <td><img src="graphics/trip1.jpeg" alt="Trip" class="crew-image"><p>Commander Tucker</p></td>
+                <td><img src="graphics/reed1.jpeg" alt="Reed" class="crew-image"><p>Lt. Reed</p></td>
+                <td><img src="graphics/hoshis1.jpeg" alt="Hoshis" class="crew-image"><p>Hoshi Sato</p></td>
+                <td><img src="graphics/travis1.jpeg" alt="Travis" class="crew-image"><p>Travis</p></td>
+            </tr>
+         </table>
+   </div>
+         <!-- Home page link -->
+         <div style="text-align: center; margin-top: 20px;">
+             <a href="index.html">Go to Homepage</a>
+          </div>
+         <!-- Footer -->
+       <footer style="position: fixed; bottom: 10px; right: 10px; text-align: right; font-size: 0.8em;">
+           <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span></p>
+       </footer>
+    </div>
+    <audio id="background-audio" loop autoplay src="images/star_trek_theme.mp3"></audio>
+      <script>
+        // Function to update the visitor count and store it in local storage
+        const audio = document.getElementById('background-audio')
+            const musicIcon = document.getElementById('music-icon');
+            let isPlaying = true;
+          musicIcon.addEventListener('click', () => {
+           if(isPlaying) {
+            audio.pause();
+            isPlaying = false;
+              musicIcon.style.opacity = 0.5;
+           } else {
+            audio.play();
+             isPlaying = true
+              musicIcon.style.opacity = 1;
+            }
+          })
+        function updateVisitorCount() {
+        let visitorCount = localStorage.getItem('visitorCount');
+        if (visitorCount === null) {
+            visitorCount = 1; // If not found, initialize to 1
+        } else {
+            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+        }
+        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        document.getElementById('visitorCount').textContent = visitorCount;
+        }
+
+      // Call the function when the page loads
+       window.onload = updateVisitorCount;
+    </script>
+</body>
+</html>

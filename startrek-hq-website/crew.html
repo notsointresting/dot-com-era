@@ -13,25 +13,25 @@
             color: #FFFF00;
             margin: 0;
             padding: 20px;
-            background-image: url('images/stars.gif'); /* background with stars */
+            background-image: url('images/stars.gif'); 
             background-repeat: repeat;
-            background-attachment: fixed; /* keep the background fixed in place */
+            background-attachment: fixed; 
          }
 
          h1 {
-             font-family: "Impact", sans-serif;  /* header font*/
+             font-family: "Impact", sans-serif;
             text-align: center;
              margin-bottom: 20px;
-              text-shadow: 2px 2px 4px #000000; /* shadow for a cool look */
+              text-shadow: 2px 2px 4px #000000; 
          }
            p {
-              font-family:  "Arial Black", Arial, sans-serif; /* paragraph text font*/
+              font-family:  "Arial Black", Arial, sans-serif; 
           }
         /* Style for the links, so they stand out */
         a {
             color: #00FFFF;
             text-decoration: underline;
-            font-family:  "Arial Black", Arial, sans-serif; /* link text font*/
+            font-family:  "Arial Black", Arial, sans-serif; 
         }
 
         a:hover {
@@ -40,23 +40,23 @@
         /* Table styles */
           table {
              width: 100%;
-             border-collapse: separate; /* space out those borders */
+             border-collapse: separate; 
              border-spacing: 10px;
-             border: 3px solid #FFFF00; /* yellow table border */
-             box-shadow: 5px 5px 10px #000000; /* table shadow */
+             border: 3px solid #FFFF00; 
+             box-shadow: 5px 5px 10px #000000; 
          }
 
          table td {
-             padding: 10px; /* space inside table cells */
+             padding: 10px; 
              text-align: center;
-              vertical-align: top; /* align content to the top */
-             background-color: #008000; /* green cell color*/
-            border: 2px solid #000000; /* cell borders */
-            font-family: "Arial Black", Arial, sans-serif;  /* text style inside the table cells */
+              vertical-align: top; 
+             background-color: #008000; 
+            border: 2px solid #000000; 
+            font-family: "Arial Black", Arial, sans-serif; 
          }
         /*Crew section styles*/
       .crew-section {
-           margin-bottom: 20px; /* space after each crew section */
+           margin-bottom: 20px; 
        }
          .crew-image {
            max-width: 80px; /* small crew pics */
@@ -74,11 +74,11 @@
         }
 
         .divider img {
-             width: 60%;  /*size of the divider images*/
+             width: 60%; 
               display: block;
-           margin: 0 auto; /* Center divider images */
+           margin: 0 auto; 
        }
-        /* music icon styles */
+        
        #music-icon {
            width: 40px;
             cursor: pointer;
@@ -86,7 +86,7 @@
            top: 10px;
             right: 10px;
             max-width: 100%;
-        filter: drop-shadow(0 0 10px #0f0);  /* cool green glow */
+        filter: drop-shadow(0 0 10px #0f0); 
            }
     </style>
 </head>
@@ -98,14 +98,14 @@
          </div>
          <!-- Header for the page -->
          <h1 style="text-align: center; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000;">
-             The Crew
+             <img src="graphics/sttcp2.gif">
          </h1>
       <!-- TOS Crew section -->
      <div class="crew-section">
          <div class="divider">
              <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
           </div>
-        <h2 style="text-align: center;">Star Trek: The Original Series</h2>
+        <h2 style="text-align: center;"><img src="graphics/sttos2.gif"></h2>
         <table style="width: 100%;">
             <tr>
                 <td><img src="graphics/kirk1.jpg" alt="Kirk" class="crew-image"><p>Captain Kirk</p></td>
@@ -122,7 +122,7 @@
          <div class="divider">
              <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
           </div>
-        <h2 style="text-align: center;">Star Trek: The Next Generation</h2>
+        <h2 style="text-align: center;"><img src="graphics/sttng2.gif"></h2>
          <table style="width: 100%;">
             <tr>
               <td><img src="graphics/picard1.jpg" alt="Picard" class="crew-image"><p>Captain Picard</p></td>
@@ -156,7 +156,7 @@
        <div class="divider">
             <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
        </div>
-       <h2 style="text-align: center;">Star Trek: Voyager</h2>
+       <h2 style="text-align: center;"><img src="graphics/stvoy2.gif"></h2>
        <table style="width: 100%;">
             <tr>
               <td><img src="graphics/janeway1.jpg" alt="Janeway" class="crew-image"><p>Captain Janeway</p></td>
@@ -173,7 +173,7 @@
          <div class="divider">
              <img src="graphics/commbar1.gif" alt="Comm Bar Divider">
          </div>
-        <h2 style="text-align: center;">Star Trek: Enterprise</h2>
+        <h2 style="text-align: center;"><img src="graphics/stent2.gif"></h2>
         <table style="width: 100%;">
             <tr>
               <td><img src="graphics/archer1.jpeg" alt="Archer" class="crew-image"><p>Captain Archer</p></td>
@@ -191,7 +191,7 @@
           </div>
          <!-- Footer for the page -->
        <footer style="position: fixed; bottom: 10px; right: 10px; text-align: right; font-size: 0.8em;">
-           <p>Brought to you by a 90s webmaster | © 1997 | Contact us at: <a href="mailto:contact@startrek-hq.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span></p>
+          <p>Brought to you by <a href="https://www.codedex.io/@notsointresting">Notsointresting</a> | Contact us at: <a href="mailto:notsointresting@protonmail.com">contact@startrek-hq.com</a> | Visitor Count: <span id="visitorCount">0</span></p>
        </footer>
     </div>
      <audio id="background-audio" loop autoplay src="images/star_trek_theme.mp3"></audio>

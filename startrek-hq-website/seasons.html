@@ -13,8 +13,8 @@
             margin: 0;
             padding: 20px;
             background-image: url('images/stars.gif');
-            background-repeat: repeat; /* This will repeat the background image */
-             background-attachment: fixed; /* This will make the background fixed */
+            background-repeat: repeat;
+             background-attachment: fixed; 
         }
 
          h1 {
@@ -26,7 +26,7 @@
           p {
               font-family: Arial, sans-serif;
           }
-        /* Style for the links */
+        
         a {
             color: #00FFFF;
             text-decoration: underline;
@@ -46,7 +46,7 @@
             0% { right: -200px; }
             100% { right: 100%;}
           }
-           /* Table styles */
+          
         table {
             width: 100%;
            border-collapse: separate;
@@ -63,7 +63,7 @@
 
         }
 
-         /* Graphic divider */
+         
         .divider {
             text-align: center;
              margin: 20px 0;
@@ -74,14 +74,14 @@
         .divider img {
              width: 60%;
              display: block;
-            margin: 0 auto; /* Center image */
+            margin: 0 auto; 
         }
           .season-link {
             display: inline-block;
              }
           .season-link:hover {
            opacity: 0.8;
-            filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+            filter: drop-shadow(0 0 5px #FFFF00); 
          }
          #music-icon {
            width: 40px;
@@ -90,7 +90,7 @@
            top: 10px;
             right: 10px;
             max-width: 100%;
-        filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+        filter: drop-shadow(0 0 10px #0f0); 
            }
     </style>
 </head>
@@ -169,19 +169,19 @@
     </div>
     <audio id="background-audio" loop autoplay src="images/star_trek_theme.mp3"></audio>
      <script>
-        // Function to update the visitor count and store it in local storage
+        
         function updateVisitorCount() {
         let visitorCount = localStorage.getItem('visitorCount');
         if (visitorCount === null) {
-            visitorCount = 1; // If not found, initialize to 1
+            visitorCount = 1; 
         } else {
-            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+            visitorCount = parseInt(visitorCount) + 1; 
         }
-        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        localStorage.setItem('visitorCount', visitorCount); 
         document.getElementById('visitorCount').textContent = visitorCount;
         }
 
-      // Call the function when the page loads
+      
        window.onload = updateVisitorCount;
     </script>
      <script>

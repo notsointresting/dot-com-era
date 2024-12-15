@@ -54,7 +54,7 @@
             border: 1px solid #ccc;
         }
 
-         /*Button styles */
+         
         button[type="submit"] {
            padding: 10px 20px;
             background-color: #000080;
@@ -68,14 +68,14 @@
           background-color: #FF00FF;
            color: #000000;
          }
-         /* Marquee styles */
+         
          marquee {
                background-color: #333;
             color: #fff;
              padding: 5px;
              font-family:  "Arial Black", Arial, sans-serif;
         }
-        /* Table styles */
+        
         table {
             width: 100%;
            border-collapse: separate;
@@ -96,7 +96,7 @@
          table th{
           font-family:  "Arial Black", Arial, sans-serif;
         }
-         /* Graphic divider */
+         
         .divider {
             text-align: center;
              margin: 20px 0;
@@ -107,9 +107,9 @@
         .divider img {
              width: 60%;
              display: block;
-            margin: 0 auto; /* Center image */
+            margin: 0 auto;
         }
-          /* Navigation button styles */
+          
         .nav-button {
           display: inline-block;
           padding: 10px 20px;
@@ -164,18 +164,18 @@
             }
          .ufo-link:hover {
          opacity: 0.8;
-           filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+           filter: drop-shadow(0 0 5px #FFFF00); 
           }
           .season-link {
             display: inline-block;
              }
           .season-link:hover {
            opacity: 0.8;
-            filter: drop-shadow(0 0 5px #FFFF00); /*Yellow glow */
+            filter: drop-shadow(0 0 5px #FFFF00); 
          }
-           /*Container styles */
+           
        .container {
-           width: 80%; /* Slightly wider container */
+           width: 80%; 
             max-width: 900px;
             margin: 20px auto;
            border: 2px solid #FFFF00;
@@ -197,12 +197,12 @@
            background-color: #008000;
              margin-bottom: 20px;
         }
-          /*Crew section styles*/
+          
       .crew-section {
           margin-bottom: 20px;
        }
         .crew-image {
-           max-width: 80px; /* Small images */
+           max-width: 80px;
          max-height: 80px;
            border: 2px solid #FFFF00;
            margin: 10px;
@@ -222,7 +222,7 @@
            top: 10px;
             right: 10px;
             max-width: 100%;
-        filter: drop-shadow(0 0 10px #0f0); /* Green glow */
+        filter: drop-shadow(0 0 10px #0f0);
            }
   </style>
 </head>
@@ -316,19 +316,19 @@
               musicIcon.style.opacity = 1;
             }
           })
-        // Function to update the visitor count and store it in local storage
+        
         function updateVisitorCount() {
         let visitorCount = localStorage.getItem('visitorCount');
         if (visitorCount === null) {
-            visitorCount = 1; // If not found, initialize to 1
+            visitorCount = 1; 
         } else {
-            visitorCount = parseInt(visitorCount) + 1; // Increment the value
+            visitorCount = parseInt(visitorCount) + 1; 
         }
-        localStorage.setItem('visitorCount', visitorCount); // Save to storage
+        localStorage.setItem('visitorCount', visitorCount); 
         document.getElementById('visitorCount').textContent = visitorCount;
         }
 
-      // Call the function when the page loads
+      
        window.onload = updateVisitorCount;
     </script>
      <script>
